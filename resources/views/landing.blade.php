@@ -5,8 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page - KarboNet</title>
   <link rel="stylesheet" href="css/landing.css">
+  <style>
+    /* Tambahan CSS untuk navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0B5345; /* hijau gelap biar konsisten */
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar .logo span {
+      color: #2ECC71; /* hijau terang */
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+      color: #2ECC71;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">METRO <span>KarboNet</span></div>
+    <ul>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#visi-misi">Visi Misi</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#paket">Paket</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">METRO <span>KarboNet</span></div>
@@ -16,7 +66,7 @@
   </header>
 
   <!-- Tentang dan Filosofi -->
-  <section class="about">
+  <section id="about" class="about">
     <div class="card">
       <h2>Tentang Kami</h2>
       <p>
@@ -35,7 +85,7 @@
   </section>
 
   <!-- Visi dan Misi -->
-  <section class="visi-misi">
+  <section id="visi-misi" class="visi-misi">
     <h2>Visi dan Misi</h2>
     <div class="grid">
       <div class="box">Menjadi penyedia internet terdepan yang terpercaya untuk seluruh lapisan masyarakat.</div>
@@ -49,7 +99,7 @@
   </section>
 
   <!-- Layanan Kami -->
-  <section class="layanan">
+  <section id="layanan" class="layanan">
     <h2>Layanan Kami</h2>
     <div class="grid">
       <div class="box">Instalasi Cepat dan Mudah</div>
@@ -59,7 +109,7 @@
   </section>
 
   <!-- Paket Internet -->
-  <section class="paket">
+  <section id="paket" class="paket">
     <h2>Paket Internet</h2>
     <div class="grid">
       <div class="box">
@@ -80,11 +130,16 @@
     </div>
   </section>
 
+  <!-- Kontak -->
+  <section id="kontak" class="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Email: support@karbonet.id | Telp: (021) 123-456</p>
+  </section>
+
   <footer>
     <p>&copy; 2025 KarboNet. All Rights Reserved.</p>
   </footer>
 
-      <script src="{{ asset('js/landing.js') }}"></script>
-
+  <script src="{{ asset('js/landing.js') }}"></script>
 </body>
 </html>
